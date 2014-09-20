@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+    
+    <LinearLayout
+        android:id="@+id/llProfile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:visibility="gone">
+ 
+        <ImageView
+            android:id="@+id/imgProfilePic"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/imgProfDesc" />
+ 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_weight="2" >
+ 
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="20dp" />
+ 
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/llData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        android:weightSum="3"
+        android:visibility="gone">
+            
+        <TextView 
+        	android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/etEmail" 
+            android:padding="5dp"
+            android:inputType="textEmailAddress"
+            android:textSize="18dp" />
+            
+        <EditText 
+        	android:id="@+id/etEmail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:padding="5dp" />
+            
+       	<TextView 
+       	    android:id="@+id/tvE_Marcado"
+       	    android:layout_width="wrap_content"
+       	    android:layout_height="wrap_content"
+       	    android:text="@string/etNotif" 
+       	    android:padding="5dp" />
+       		    
+       	<RadioButton 
+       		android:id="@+id/rbMarcado"
+       		android:layout_width="wrap_content"
+       		android:layout_height="wrap_content"
+       		android:text="@string/trbMarcado" />
+       		    
+		<RadioButton 
+       		android:id="@+id/rbUrgente"
+       		android:layout_width="wrap_content"
+       		android:layout_height="wrap_content"
+       		android:text="@string/trbUrgente" /> 
+       		
+		<TextView 
+		    android:id="@+id/etToken"
+		    android:layout_width="wrap_content"
+       		android:layout_height="wrap_content"/>
+            
+            <Button
+        		android:id="@+id/btn_accept"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:text="@string/btn_accept"
+        		android:layout_gravity="center_horizontal"/>
+            
+            <Button
+        		android:id="@+id/btn_sign_out"
+        		android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+        		android:text="@string/btn_logout_from_google"
+        		android:layout_marginBottom="10dp"/>
+ 
+    		<Button
+        		android:id="@+id/btn_revoke_access"
+        		android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+        		android:text="@string/btn_revoke_access" />
+            
+        </LinearLayout>
+        </ScrollView>
+    
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btn_sign_in"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/>
+
+</LinearLayout>
